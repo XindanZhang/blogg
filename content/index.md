@@ -3,6 +3,5 @@ title: Winifred!
 ---
 
 ## Why this website
-A website for writing blogs with regard to some advanced AI information.
-
+A digital corner dedicated to documenting my intellectual journey: tracking algorithm breakthroughs, new LLM models, implementation notes, and hands-on experiments with weekly updates.
 ## Fun test

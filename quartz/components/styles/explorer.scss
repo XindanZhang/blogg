@@ -34,6 +34,7 @@ button#explorer {
   align-items: center;
 
   & h2 {
+    font-family: "Special Elite", monospace;
     font-size: 1rem;
     display: inline-block;
     margin: 0;
@@ -92,6 +93,7 @@ button#explorer {
       transform 0.35s ease,
       opacity 0.2s ease;
     & li > a {
+      font-family: "Special Elite", monospace;
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
