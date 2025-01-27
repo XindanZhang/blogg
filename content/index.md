@@ -1,6 +1,8 @@
 ---
-title: Welcome to Winifred's world!
+title: Winifred!
 ---
 
-This is a TEST.
-See another [website](https://quartz.jzhao.xyz) for how to use.
+## Why this website
+A website for writing blogs with regard to some advanced AI information.
+
+## Fun test
