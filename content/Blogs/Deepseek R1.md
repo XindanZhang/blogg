@@ -26,18 +26,29 @@ Force the model to think longer rather than just giving us answer.
 
 ## Limitations of PRM
 
-Process Reward Model (PRM)
+**Process Reward Model (PRM)**
 
 Limitations of PRM: The report identifies three main limitations of PRM that hinder its success in large-scale reinforcement learning:
 
 1.  Defining Fine-Grain Steps: It is challenging to explicitly define fine-grain steps in general reasoning tasks.
 2.  Intermediate Step Validation: Determining whether the current intermediate step is correct is difficult. Automated annotation using models may not yield satisfactory results, while manual annotation is not scalable.
-3.  Reward Hacking: Introducing a model-based PRM can lead to reward hacking, requiring additional training resources and complicating the training pipeline￼.
+3.  Reward Hacking: Introducing a model-based PRM can lead to reward hacking, requiring additional training resources and complicating the training pipeline.
 
 ## Limitations of MCTS
-Monte Carlo Tree Search (MCTS)
+**Monte Carlo Tree Search (MCTS)**
 
 Challenges with MCTS: The report discusses the challenges encountered when using MCTS to enhance test-time compute scalability:
 
 1.  Search Space Complexity: Unlike chess, token generation presents an exponentially larger search space, making it difficult to avoid local optima.
-2.  Value Model Training: Training a fine-grained value model is inherently difficult, which makes it challenging for the model to iteratively improve￼.
+2.  Value Model Training: Training a fine-grained value model is inherently difficult, which makes it challenging for the model to iteratively improve.
+
+
+## Distillation
+
+Distillation Success: The report shows that reasoning patterns from larger models can be distilled into smaller models, resulting in better performance compared to reasoning patterns discovered through RL on small models.
+
+## Conclusion
+
+**Deepseek R1-Zero**, this model demonstrates significant reasoning capibilities through pure RL without any supervised fine-tuning data.
+
+**Deepseek R1**, this model incorporates a small amount of cold start data and MST(multi-stage training) pipeline to address the issues in Zero model like language-mixing and poor readability.
