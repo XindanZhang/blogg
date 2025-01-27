@@ -31,3 +31,5 @@ LLM-generated and algorithmically verified data (e.g., coding challenges) shows 
 
 > [!Warning]
 > "The market is so excited about AI that it has thankfully ignored this, allowing companies like OpenAI to post breathtaking from-inception, cumulative operating losses while garnering increasingly eye-popping valuations in follow-up investment rounds (although, to their credit, they have also been able to demonstrate very fast growing revenues). But eventually, for this situation to be sustainable over a full market cycle, these data center costs do need to eventually be recouped, hopefully with a profit, which over time is competitive with other investment opportunities on a risk-adjusted basis."
+
+### The New Paradigm
