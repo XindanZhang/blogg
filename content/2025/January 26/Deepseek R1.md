@@ -27,22 +27,16 @@ The training uses the Group Relative Policy Optimization (GRPO) algorithm, which
 
 ## [The Multi-Stage Training of DeepSeek R1](https://www.philschmid.de/deepseek-r1)
 
+![[images/deepseek_r1_process.png]]_[The training process of Deepseek R1](https://mirror-feeling-d80.notion.site/DeepSeek-R1-182808527b17801585dadb84f7c66cd9)_
+
 >To prevent the early unstable cold start phase of reinforcement training (RL) training from the base model, the team started with supervised fine-tuning.
-
 >Stage 1/4 Base to Supervised Fine-Tuning (SFT)
-
 >Collected up to 10k token-long chain-of-thought (CoT) using the fine-tuned models, R1-zero and human annotator. The data is used to fine-tune Deepseek V3 base to improve readbility and coherence.
-
 >Stage 2/4 RL for Reasoning
-
 >Used the same RL pipeline as R1-Zero, focusing on reasoning-intensive tasks such as coding and math using the same Rule-Based Reward Models. This time, an additional reward for "language consistency" is used to help the model stick to the same language.
-
 >Stage 3/4 Rejection Sampling and SFT
-
 >Generated large synthetic dataset using Reject Sampling (RS) focusing on writing, role-playing, and other general-purpose tasks. The model from Stage 2 was used with Deepseek V3 as a Judge to generate 600k reasoning-related samples and 200k for writing, role-playing, and other general-purpose tasks using portions of the SFT dataset of DeepSeek-V3 or regenerating them with CoT included.
-
 >Stage 4/4 RL for Helpfulness
-
 >In the Final Stage, GRPO is used again with a combination of Rule-Based and Outcome Reward Models to improve the model's helpfulness and harmlessness. Leading to the Deepseek R1 model.
 
 ## Limitations of PRM

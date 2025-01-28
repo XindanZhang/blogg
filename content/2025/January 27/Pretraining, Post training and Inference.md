@@ -14,5 +14,5 @@ The above belongs to training phase.
 This is inference/test phase.
 
 > Test-time compute refers to the computational resources utilized during the inference phase—the process where a model generates outputs in response to user prompts or queries. Unlike the training phase, which is a resource-intensive but one-time endeavor, inference occurs every time the model is deployed, making the efficient management of test-time compute critical for both performance and practical scalability.
-
+>
 >Test time compute refers to the amount of compute that is used to generate completions from a language model (LLM) at test or inference time. This is in contrast to (pre- or post-) training compute, which is the amount of compute used to train the model on a large corpus of data.
