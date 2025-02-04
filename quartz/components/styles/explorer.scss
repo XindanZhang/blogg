@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
-  font-family: "Mrs Saint Delafield", monospace;
+  font-family: "Mrs Saint Delafield";
   &.desktop-only {
     @media all and not ($mobile) {
       display: flex;
@@ -35,7 +35,7 @@ button#explorer {
   align-items: center;
 
   & h2 {
-    font-family: "Mrs Saint Delafield", monospace;
+    font-family: "Mrs Saint Delafield";
     font-size: 1rem;
     display: inline-block;
     margin: 0;
@@ -94,7 +94,7 @@ button#explorer {
       transform 0.35s ease,
       opacity 0.2s ease;
     & li > a {
-      font-family: "Mrs Saint Delafield", monospace;
+      font-family: "Mrs Saint Delafield";
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
@@ -121,7 +121,7 @@ svg {
 
   & div > a {
     color: var(--secondary);
-    font-family: var(--headerFont);
+    font-family: "Mrs Saint Delafield";
     font-size: 0.95rem;
     font-weight: $semiBoldWeight;
     line-height: 1.5rem;
@@ -142,7 +142,7 @@ svg {
     padding-right: 0;
     display: flex;
     align-items: center;
-    font-family: var(--headerFont);
+    font-family: "Mrs Saint Delafield";
 
     & span {
       font-size: 0.95rem;
