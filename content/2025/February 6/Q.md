@@ -59,6 +59,40 @@ But the note in handout:
 **So should I CHANGE the database schema?**
 
 
+To actually see millisecond changes, you need to generate a high-precision timestamp in JavaScript (or use another SQLite method, like using strftime to get millisecond precision) when updating the record, rather than relying solely on CURRENT_TIMESTAMP.
+```javascript
+updatePaper: async (id, paper) => {
+  try {
+    // 用 JavaScript 生成一个包含毫秒的高精度时间戳
+    const timestamp = new Date()
+      .toISOString()
+      .replace("T", " ")
+      .replace("Z", ""); // 得到 "YYYY-MM-DD HH:mm:ss.sss" 格式
+
+    await new Promise((resolve, reject) => {
+      db.run(
+        "UPDATE papers SET title = ?, authors = ?, published_in = ?, year = ?, updated_at = ? WHERE id = ?",
+        [
+          paper.title,
+          paper.authors,
+          paper.published_in,
+          paper.year,
+          timestamp,
+          id,
+        ],
+        function (err) {
+          if (err) reject(err);
+          else resolve();
+        },
+      );
+    });
+    return await dbOperations.getPaperById(id);
+  } catch (error) {
+    throw error;
+  }
+},
+```
+
 ![[images/validateID.png]]_This image shows we can use
 `router get("/papers/:id", validateId, async (req, res, next) →> {})` validateId as the middleware, but in the code given in Github, only this is provided:
 
