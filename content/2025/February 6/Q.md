@@ -22,11 +22,42 @@ The time is created with `CURRENT_TIMESTAMP`.
 
 In this case, the format of time that returns would be "YYYY-MM-DD HH:MM:SS". This value only has seconds-level precision, and doesn't include fractional seconds(milliseconds). Even if I convert the timestamps to ISO 8601 format using toISOString(), the underlying value stored by CURRENT_TIMESTAMP only has second-level precision. So when we test the update paper function of the code, if the test time is millisecond-level change, it fails.
 
-So can i change this with:
+So can I change this with:
 ```javascript
 created_at DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')),
 updated_at DATETIME DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
 ```
+
+And also update the updatepaper function:
+```javascript
+"UPDATE papers SET title = ?, authors = ?, published_in = ?, year = ?, updated_at = (strftime('%Y-%m-%dT%H:%M:%fZ', 'now')) WHERE id = ?",
+```
+
+But here is the problem, I need to delete the old database table everytime before I test.
+Add the code below for test.
+
+```javascript
+// TODO: Create a table named papers with the schema specified in the handout
+db.serialize(() => {
+  // db.run("DROP TABLE IF EXISTS papers", (err) => {
+  //   if (err) {
+  //     console.error("Error dropping table papers:", err);
+  //   } else {
+  //     console.log("Dropped old table 'papers' (if existed)");
+  //   }
+  // });
+  ...
+});
+```
+
+But the note in handout:
+
+>[!Note:]
+> - The table creation should be implemented in database.js
+> - Timestamps are **automatically managed by SQLite**
+
+**So should I CHANGE the database schema?**
+
 
 ![[images/validateID.png]]_This image shows we can use
 `router get("/papers/:id", validateId, async (req, res, next) →> {})` validateId as the middleware, but in the code given in Github, only this is provided:
