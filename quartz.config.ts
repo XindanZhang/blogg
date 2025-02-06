@@ -24,7 +24,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Mrs Saint Delafield",
+        header: "Macondo",
         body: "EB Garamond",
         code: "IBM Plex Mono",
       },

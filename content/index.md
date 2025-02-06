@@ -8,4 +8,4 @@ covering algorithm breakthroughs, new LLM models, implementation details,
 and hands-on experiments, with daily updates.
 
 
-*The choice of fonts is recommended by [Baochun](http://baochun.org)*
+*The choice of body font is recommended by [Baochun](http://baochun.org)*

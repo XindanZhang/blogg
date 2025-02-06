@@ -107,3 +107,10 @@ const { validatePaper } = require("./middleware");
 ```
 
 But if we choose to embed the ID validation logic directly inside each route handler instead of using the separate validateId middleware, then the standalone validateId function becomes redundant.
+
+
+After communicating with Chen, I **SOLVED** my two questions above.
+
+First, we don't need to be concerned about millisecond precision in the time format.
+
+Second, we can freely add middleware to improve code readability.
