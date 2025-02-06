@@ -7,6 +7,12 @@ Watched the tutorial [Promises in 10 Mintues](https://youtu.be/DHvZLI7Db8E?si=PR
 > [!Implementation]
 > Inplement all the code in the free online [website](https://codepen.io/pen/).
 
+Three status of Promise:
+
+- Pending
+- Fulfilled
+- Rejected
+
 ```javascript
 let p = new Promise((resolve, reject) => {
   let a = 1 + 1
@@ -99,7 +105,7 @@ one(() => {                    // anonymous function passed to one
 })
 ```
 
-### Promise Chaining
+### [Promise Chaining](https://blog.webdevsimplified.com/2021-09/javascript-promises/)
 ```javascript
 function one() {
   return new Promise(resolve => {
