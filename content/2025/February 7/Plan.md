@@ -6,3 +6,5 @@
 | Afternoon         | 1724   | ✅        |
 | Afternoon         | [Next.js](https://b23.tv/XlkPGux)   |         |
 | Night         |React + Next.js |       |
+
+[React](https://b23.tv/iu5gpHd)
