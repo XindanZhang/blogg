@@ -85,3 +85,5 @@ PATCH /users/123
     }
 }
 ```
+
+CRUD operations are often implemented in RESTful APIs, but RESTful API is a broader concept.
