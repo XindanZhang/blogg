@@ -43,6 +43,8 @@ user.regularFunction();
 user.arrowFunction();
 ```
 
+![[images/scope.png]]_Execute in [Javascript-playground](https://playcode.io/javascript)_
+
 This is why arrow functions are commonly used in callbacks, especially when you need to preserve the outer this reference.
 
 Arrow functions have become my go to for creating any new function.
