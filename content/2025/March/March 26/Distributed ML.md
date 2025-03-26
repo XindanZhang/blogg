@@ -26,12 +26,16 @@ However, NCCL still helps by providing optimized point-to-point communication fu
 Key Point: Model parallelism uses NCCL for efficient point-to-point communication, but not Ring All-Reduce.
 
 **How Does NCCL Use Ring Allreduce to Speed Up Communication?**
+
 NCCL implements the ring allreduce algorithm to handle intra-job communication, which refers to data exchange between GPUs working on the same training job. For example, when updating gradients:
-Gradient averaging: In distributed training, each GPU computes gradients based on its local data. These gradients need to be averaged across all GPUs to keep the model consistent. NCCL uses ring allreduce to perform this averaging efficiently.
+
+- Gradient averaging: In distributed training, each GPU computes gradients based on its local data. These gradients need to be averaged across all GPUs to keep the model consistent. NCCL uses ring allreduce to perform this averaging efficiently.
+
 Key optimizations:
-Minimized data transfers: Each GPU only communicates with its two neighbors, reducing the total number of data exchanges compared to other methods.
-Efficient bandwidth use: The ring structure allows multiple GPU pairs to send and receive data simultaneously, maximizing the use of available network bandwidth.
-Reduced latency: NCCL overlaps communication with computation, meaning some GPUs can start exchanging data while others are still computing, which hides some of the communication time.
+
+- Minimized data transfers: Each GPU only communicates with its two neighbors, reducing the total number of data exchanges compared to other methods.
+- Efficient bandwidth use: The ring structure allows multiple GPU pairs to send and receive data simultaneously, maximizing the use of available network bandwidth.
+- Reduced latency: NCCL overlaps communication with computation, meaning some GPUs can start exchanging data while others are still computing, which hides some of the communication time.
 
 **Why This Speeds Up Gradient Updates**
 
