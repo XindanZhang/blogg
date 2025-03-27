@@ -6,4 +6,4 @@ Trees are connected acyclic undirected graphs.
 ## Basic Concepts
 
 
-![[images/Concept.JPG]]_Basic Concepts_
+![[images/Concepts.JPG]]_Basic Concepts_
