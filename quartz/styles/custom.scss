@@ -1,3 +1,44 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Increase body font size
+body {
+  font-size: 1.2rem;
+}
+
+// Increase heading font sizes
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.32rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.1rem;
+}
+
+// Increase explorer font sizes
+.explorer button#explorer h2 {
+  font-size: 1.1rem;
+}
+
+.explorer #explorer-content ul li > a {
+  font-size: 1.05rem;
+}
+
+.explorer .folder-container div > a {
+  font-size: 1.05rem;
+}
+
+.explorer .folder-container div > button span {
+  font-size: 1.05rem;
+}
