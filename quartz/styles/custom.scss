@@ -119,9 +119,10 @@ h6 {
   // Second row: search + buttons + explorer toggle in one compact row
   .sidebar.left .flex-component {
     flex-direction: row !important;
-    gap: 0.5rem !important;
+    gap: 0.25rem !important;
     margin: 0;
-    width: 100%;
+    width: auto;
+    flex: 1;
     align-items: center;
 
     .search {
@@ -134,8 +135,7 @@ h6 {
       }
     }
 
-    .darkmode,
-    .readermode {
+    .darkmode {
       flex-shrink: 0;
       padding: 0.5rem;
       margin: 0;
@@ -147,9 +147,24 @@ h6 {
     }
   }
 
-  // Mobile explorer button - in the same row as search
+  // Mobile explorer button - show it and style it
   .sidebar.left .explorer {
-    display: none;
+    display: flex !important;
+    flex-shrink: 0;
+    margin: 0;
+
+    button.desktop-explorer {
+      padding: 0.5rem;
+
+      h2 {
+        display: none;
+      }
+
+      .fold {
+        display: block;
+        margin: 0;
+      }
+    }
   }
 
   // Hide spacer on mobile
