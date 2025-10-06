@@ -1,4 +1,6 @@
-# Postrouting and IP Masquerading in Linux
+## Adding NAT to connect physical machine in external realm
+
+### Postrouting and IP Masquerading in Linux
 
 Most of the blog is from [this](https://mellowhost.com/blog/postrouting-and-ip-masquerading-in-linux.html#:~:text=What%20is%20POSTROUTING?,be%20masked%20is%20the%20Source.)
 
@@ -6,10 +8,12 @@ Most of the blog is from [this](https://mellowhost.com/blog/postrouting-and-ip-m
 
 ---
 
-## What is POSTROUTING?
+### What is POSTROUTING?
 
 >A Postrouting chain in NAT table means altering the IP packet after the routing is completed. Logically, a postrouting can be used to change the Source Address. As the routing is completed and destination has his own address, the only unknown address that can be masked is the Source. This is why postrouting is used for SNAT.
 
 ## What is IP MASQUERADING?
 
->
+>Now, when a packet leaves the local network and tries to travel the public network, it will fail to traverse if it keeps using the local details. This is where IP Masquerading plays the role. IP Masquerading is masking the packet with identity of the external interface.
+
+More details could be found on this [blog](https://mellowhost.com/blog/postrouting-and-ip-masquerading-in-linux.html#:~:text=What%20is%20POSTROUTING?,be%20masked%20is%20the%20Source.)
