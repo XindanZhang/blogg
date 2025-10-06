@@ -1,6 +1,7 @@
 # Postrouting and IP Masquerading in Linux
 
 Most of the blog is from [this](https://mellowhost.com/blog/postrouting-and-ip-masquerading-in-linux.html#:~:text=What%20is%20POSTROUTING?,be%20masked%20is%20the%20Source.)
+
 >IPTables uses NAT table to forward packets to another node.
 
 ---
