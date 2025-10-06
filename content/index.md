@@ -1,5 +1,5 @@
 ---
-title: 🐾Cndy🍸
+title: 🐾Cindy🍸
 ---
 
 ## Why this website
