@@ -83,8 +83,8 @@ h6 {
 
 // Mobile-specific improvements
 @media (max-width: 800px) {
-  // Improve spacing on mobile
-  .page > #quartz-body {
+  // Improve spacing on mobile (exclude when explorer is active)
+  .page > #quartz-body:not(.lock-scroll) {
     padding: 0 0.5rem;
   }
 
@@ -94,8 +94,8 @@ h6 {
     line-height: 1.7rem;
   }
 
-  // Adjust sidebar spacing on mobile
-  .sidebar.left {
+  // Adjust sidebar spacing on mobile (only for non-explorer sidebars)
+  .sidebar:not(.left:has(.explorer)) {
     padding-top: 1rem !important;
     gap: 0.5rem !important;
   }
