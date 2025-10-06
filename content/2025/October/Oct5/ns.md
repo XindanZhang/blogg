@@ -1,3 +1,3 @@
-# Building overlay network with Vlxan
+# Building overlay network with Vxlan
 
-After trying a whole day working on this with even `iptables` or `[rtnetlink](https://docs.rs/rtnetlink/latest/rtnetlink/)`
+After trying a whole day working on building overlay network with Vxlan with even `iptables` or `[rtnetlink](https://docs.rs/rtnetlink/latest/rtnetlink/)`
