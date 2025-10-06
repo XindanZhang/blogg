@@ -2,7 +2,7 @@
 
 A pipe could be used for inter-process communication (IPC) in Unix-like operating systems. Especially when we want to connect parent process and child process, a pipe is a good choice.
 
-![/static/pipe.svg]
+![[images/pipe.svg]]
 
 ## Building overlay network with Vxlan
 
