@@ -83,12 +83,13 @@ h6 {
 
 // Mobile-specific improvements
 @media (max-width: 800px) {
-  // Fix mobile sidebar layout - make it vertical
+  // Fix mobile sidebar layout - keep as horizontal for compact layout
   .page > #quartz-body .sidebar.left {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0.75rem !important;
-    padding: 1rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 1rem 0.5rem !important;
+    flex-wrap: nowrap !important;
   }
 
   // Improve spacing on mobile
@@ -102,24 +103,27 @@ h6 {
     line-height: 1.7rem;
   }
 
-  // Improve article spacing
+  // Improve article spacing and add proper spacing from header
   article {
     padding: 0 0.5rem;
+    margin-top: 2rem;
   }
 
-  // Optimize page title on mobile
+  // Keep title visible but compact
   .sidebar.left .page-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin: 0;
+    flex-shrink: 0;
     text-align: left;
   }
 
-  // Optimize search and buttons layout
+  // Optimize search and buttons layout - keep them in one row
   .sidebar.left .flex-component {
     flex-direction: row !important;
     gap: 0.5rem !important;
     margin: 0;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
 
     .search {
       flex: 1;
@@ -144,27 +148,34 @@ h6 {
     }
   }
 
-  // Optimize mobile explorer layout
+  // Mobile explorer - keep in same row, smaller
   .sidebar.left .explorer {
-    width: 100%;
-    margin-top: 0;
+    flex-shrink: 0;
+    margin: 0;
+    max-width: 40px;
 
     button.desktop-explorer {
-      padding: 0.5rem 0;
+      padding: 0.4rem;
+      min-width: 40px;
 
       h2 {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
       }
     }
 
     .explorer-content {
-      max-height: 50vh;
-      overflow-y: auto;
+      display: none;
     }
   }
 
-  // Hide mobile spacer as we don't need it in vertical layout
-  .sidebar.left .spacer.mobile-only {
-    display: none;
+  // Article title spacing
+  .page-header {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  // Content meta spacing
+  .content-meta {
+    margin-bottom: 1.5rem;
   }
 }
