@@ -2,11 +2,11 @@
 
 A pipe could be used for inter-process communication (IPC) in Unix-like operating systems. Especially when we want to connect parent process and child process, a pipe is a good choice.
 
-![image/pipe.svg]
+![/static/pipe.svg]
 
 ## Building overlay network with Vxlan
 
-After trying a whole day working on building overlay network with Vxlan with either `iptables` or `[rtnetlink](https://docs.rs/rtnetlink/latest/rtnetlink/)`, i failed to connect 2 physical machines with different private network stack respectively.
+After trying a whole day working on building overlay network with Vxlan with either `iptables` or [rtnetlink](https://docs.rs/rtnetlink/latest/rtnetlink/), i failed to connect 2 physical machines with different private network stack respectively.
 
 The [example](https://github.com/rust-netlink/rtnetlink/blob/main/examples/create_vxlan.rs) for creating a vxlan interface is here:
 
