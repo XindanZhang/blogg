@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: bun install --frozen-lockfile
       - name: Build Quartz
-        run: bunx quartz build
+        run: bun run quartz build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
